@@ -30,3 +30,5 @@ function getFullName() {
 }
 let getEmployeeName = getFullName.bind(user2);
 console.log(getEmployeeName());
+
+user1.name.replace()
