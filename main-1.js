@@ -1,3 +1,4 @@
+// @ -1, 16 + 0, 0 @@
 let arr = ["olma", "nok"];
 arr.push("banan", "anjir", "kivi")
 console.log(arr);
