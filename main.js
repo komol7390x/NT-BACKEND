@@ -55,7 +55,6 @@ function highSalary(set1) {
     }
     return arr2
 }
-
 console.log(highSalary(employees));
 
 
