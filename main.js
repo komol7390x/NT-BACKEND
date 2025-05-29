@@ -37,10 +37,23 @@ const employees = new Set([
     { name: "David", salary: 70000, department: "IT" },
 ])
 function highSalary(set1) {
-    let arr=[]
-    for (let key of set1) {
-        
+    let map = new Map();
+    for (let item of set1) {
+        if (!(map.has(item.department))) {
+            map.set(item.department,item.salary)
+        } else {
+            map.set(item.department,map.get(item.department)+item.salary)
+        }
     }
+    map = [...map].sort((a, b) => b[1] - a[1]);
+    let arr2 = [];
+    let max = map[0][1];
+    for (key of map) {
+        if (max == key[1]) {
+            arr2.push({department: key[0],average:key[1]})
+        }
+    }
+    return arr2
 }
 
 console.log(highSalary(employees));
