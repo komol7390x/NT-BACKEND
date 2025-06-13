@@ -12,4 +12,24 @@ var differenceOfSums = function (n, m) {
     sum-=inter
     return sum
 };
-console.log(differenceOfSums(5, 1));
+// console.log(differenceOfSums(5, 1));
+// ----------------------------------------------
+var findWordsContaining = function (words, x) {
+    let arr = [];
+    for (let i = 0; i < words.length; i++){
+        if (words[i].includes(x)) {
+            arr.push(i)
+        }
+    }
+    return arr
+};
+words = ["abc", "bcd", "aaaa", "cbc"], x = "a"
+const res = findWordsContaining(words, x);
+console.log(res);
+// ----------------------------------------------
+var triangleType = function (nums) {
+
+};
+console.log(triangleType[3, 3, 3]);
+console.log(triangleType([3, 4, 5]));
+console.log(triangleType());
