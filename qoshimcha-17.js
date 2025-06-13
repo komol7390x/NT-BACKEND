@@ -32,11 +32,11 @@ var triangleType = function (nums) {
     console.log(a,b,c);
     if (a == b && b == c && a==c) {
         return 'equilateral'  
-    } else if (a == b || b == c || a == c) {
-        return "scalene"
-    } else if (a + b >= c && a + c >= b && b + c >= a)
+    } else if ((a == b || b == c || a == c) &&(a + b > c && a + c > b && b + c > a)) {
+        return "isosceles"
+    } else if (a + b > c && a + c > b && b + c > a)
     {
-        return 'isosceles' 
+        return 'scalene' 
     } else {
         return 'none'
     }
