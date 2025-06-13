@@ -25,11 +25,18 @@ var findWordsContaining = function (words, x) {
 };
 words = ["abc", "bcd", "aaaa", "cbc"], x = "a"
 const res = findWordsContaining(words, x);
-console.log(res);
+// console.log(res);
 // ----------------------------------------------
 var triangleType = function (nums) {
+    [a, b, c] = nums
+    console.log(a,b,c);
+    if (a == b && b == c && a==c) {
+        return 'equilateral'  
+    } else if (a + b >= c && a + c >= b && b + c >= a) {
+        return "scalene"
+    }
 
 };
-console.log(triangleType[3, 3, 3]);
+console.log(triangleType([3, 3, 3]));
 console.log(triangleType([3, 4, 5]));
-console.log(triangleType());
+console.log(triangleType([3,5,9]));
