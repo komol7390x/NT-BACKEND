@@ -1,12 +1,13 @@
-const controller = new AbortController();
-async function getData() {
-    try {
-        const data = await fetch('https://httpstat.us/200?sleep=5000', { signal: controller.signal })
-            .then(res=>console.log(res));
-    } catch (error) {
-        console.log(error);
+var singleNumber = function (nums) {
+    let map1=new Map()
+    for (let item of nums) {
+        map1.set(item, map1.has(item) ? map1.get(item) + 1 : 1);
     }
-}
-await getData();
-
-setTimeout(() => controller.abort(), 3000)
+    console.log(map1);
+    for (let [key, val] of map1) {
+        if (val == 1) {
+            return key
+        }
+    }
+};
+singleNumber([2, 2, 1])
